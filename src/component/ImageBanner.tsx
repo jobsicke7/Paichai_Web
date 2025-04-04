@@ -19,7 +19,7 @@ const ImageBanner: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const r2BaseUrl = process.env.NEXT_PUBLIC_R2_URL || 'https://credit-cdn-internal.wakcareers.com';
+      const r2BaseUrl = process.env.NEXT_PUBLIC_R2_URL || 'https://example.com';
       const maxBanners = 5;
       let validBannerUrls: string[] = [];
 

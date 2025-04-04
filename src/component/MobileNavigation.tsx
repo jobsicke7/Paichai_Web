@@ -18,17 +18,12 @@ const MobileNavigation = () => {
       const isTop = currentScrollY === 0;
       setIsAtTop(isTop);
       
-      // 아래로 스크롤할 때(currentScrollY > lastScrollY) 바가 사라지고
-      // 위로 스크롤할 때(currentScrollY < lastScrollY) 바가 나타남
       if (currentScrollY < lastScrollY) {
-        // 스크롤 업 - 바 표시
         setIsVisible(true);
       } else if (currentScrollY > lastScrollY) {
-        // 스크롤 다운 - 바 숨김
         setIsVisible(false);
       }
       
-      // 최상단에 있을 때는 항상 표시
       if (isTop) {
         setIsVisible(true);
       }
@@ -37,13 +32,11 @@ const MobileNavigation = () => {
     };
   
     window.addEventListener('scroll', handleScroll);
-    // 초기 확인
     handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigation items with icons and labels
   const navItems = [
     { href: '/', label: '홈', icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">

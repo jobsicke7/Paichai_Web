@@ -1,4 +1,3 @@
-/* Mobile Navigation styles */
 .mobileNav {
   display: none;
   position: fixed;
@@ -53,17 +52,14 @@
   font-size: 12px;
 }
 
-/* Light mode active state */
 [data-theme='light'] .active {
   color: #000000;
 }
 
-/* Dark mode active state */
 [data-theme='dark'] .active {
   color: #ffffff;
 }
 
-/* Only show on mobile screens */
 @media (max-width: 768px) {
   .mobileNav {
     display: block;

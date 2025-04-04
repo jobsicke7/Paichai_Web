@@ -7,8 +7,8 @@ import MobileNavigation from '@/component/MobileNavigation';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Paichai App',
-  description: 'Paichai Application',
+  title: 'Paichai.',
+  description: '배재고등학교 학생 지원 사이트입니다',
 };
 
 export default function RootLayout({

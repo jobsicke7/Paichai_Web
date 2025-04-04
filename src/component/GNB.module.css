@@ -1,4 +1,3 @@
-/* components/GNB.module.css */
 .header {
   width: 100%;
   height: 60px;
@@ -47,21 +46,19 @@
 }
 
 .navLink {
-  color: #999999; /* 얕은 회색 기본 색상 */
+  color: #999999;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.2s ease;
 }
 
-/* 라이트 모드에서의 활성 링크 색상 */
 [data-theme='light'] .activeLink {
-  color: #000000; /* 검은색 */
+  color: #000000;
   font-weight: 500;
 }
 
-/* 다크 모드에서의 활성 링크 색상 */
 [data-theme='dark'] .activeLink {
-  color: #ffffff; /* 흰색 */
+  color: #ffffff;
   font-weight: 500;
 }
 

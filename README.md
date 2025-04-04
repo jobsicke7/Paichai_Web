@@ -3,4 +3,4 @@
 
 ## 팀원
 배재고등학교 컴퓨터 동아리 **SPACE**
-- 40기 이준석 @jobsicke7 | FE, BE, UI/UX
+- 40기 이준석 @jobsicke7 | 제작

@@ -47,15 +47,24 @@
 }
 
 .navLink {
-  color: var(--text);
+  color: #999999; /* 얕은 회색 기본 색상 */
   text-decoration: none;
   font-size: 16px;
   transition: color 0.2s ease;
 }
 
-.navLink:hover {
-  color: var(--primary);
+/* 라이트 모드에서의 활성 링크 색상 */
+[data-theme='light'] .activeLink {
+  color: #000000; /* 검은색 */
+  font-weight: 500;
 }
+
+/* 다크 모드에서의 활성 링크 색상 */
+[data-theme='dark'] .activeLink {
+  color: #ffffff; /* 흰색 */
+  font-weight: 500;
+}
+
 
 .actions {
   display: flex;

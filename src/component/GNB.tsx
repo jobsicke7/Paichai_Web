@@ -2,11 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './GNB.module.css';
 import { useTheme } from './ThemeProvider';
 
 const GNB = () => {
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
 
   return (
     <header className={styles.header}>
@@ -18,16 +20,36 @@ const GNB = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li>
-              <Link href="/" className={styles.navLink}>홈</Link>
+              <Link 
+                href="/" 
+                className={`${styles.navLink} ${pathname === '/' ? styles.activeLink : ''}`}
+              >
+                홈
+              </Link>
             </li>
             <li>
-              <Link href="/games" className={styles.navLink}>게시글</Link>
+              <Link 
+                href="/post" 
+                className={`${styles.navLink} ${pathname === '/post' ? styles.activeLink : ''}`}
+              >
+                게시글
+              </Link>
             </li>
             <li>
-              <Link href="/stories" className={styles.navLink}>시간표</Link>
+              <Link 
+                href="/scedule" 
+                className={`${styles.navLink} ${pathname === '/scedule' ? styles.activeLink : ''}`}
+              >
+                시간표
+              </Link>
             </li>
             <li>
-              <Link href="/about" className={styles.navLink}>시간표</Link>
+              <Link 
+                href="/memo" 
+                className={`${styles.navLink} ${pathname === '/memo' ? styles.activeLink : ''}`}
+              >
+                메모
+              </Link>
             </li>
           </ul>
         </nav>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './GNB.module.css';
 import { useTheme } from './ThemeProvider';
+import LoginButton from './auth/LoginButton';
 
 const GNB = () => {
   const { theme, toggleTheme } = useTheme();
@@ -37,8 +38,8 @@ const GNB = () => {
             </li>
             <li>
               <Link 
-                href="/scedule" 
-                className={`${styles.navLink} ${pathname === '/scedule' ? styles.activeLink : ''}`}
+                href="/schedule" 
+                className={`${styles.navLink} ${pathname === '/schedule' ? styles.activeLink : ''}`}
               >
                 시간표
               </Link>
@@ -78,7 +79,7 @@ const GNB = () => {
               </svg>
             )}
           </button>
-          <button className={styles.loginButton}>로그인</button>
+          <LoginButton className={styles.loginButton} />
         </div>
       </div>
     </header>
